@@ -9,12 +9,13 @@ version = 0.1
 entrypoint = main.py
 orientation = portrait
 fullscreen = 0
-icon.filename = static/asset/favicon.png
-presplash.filename = static/asset/favicon.png
+icon.filename = static/asset/favicon-8.png
+presplash.filename = static/asset/favicon-8.png
 android.add_assets = static/,models/
 
 # Only supported/possible requirements for Android
-requirements = python3, kivy, pywebview, blinker, bottle, click, coloredlogs, Flask, flatbuffers, humanfriendly, itsdangerous, Jinja2, MarkupSafe, numpy, packaging, protobuf, proxy_tools, typing_extensions, Werkzeug, xxhash
+requirements = python3, kivy, pywebview, Flask, numpy, xxhash, onnxruntime, opencv-python-headless
+# blinker, bottle, click, coloredlogs, flatbuffers, humanfriendly, itsdangerous, MarkupSafe, packaging, protobuf, proxy_tools, typing_extensions, Werkzeug 
 
 android.permissions = INTERNET
 android.enable_androidx = 1
