@@ -20,7 +20,7 @@ android.permissions = INTERNET
 android.enable_androidx = 1
 
 # Add the pywebview Android JAR (replace with actual path)
-android.add_jars = <path_to_pywebview-android.jar>
+android.add_jars = pywebview-android.jar
 
 arch = arm64-v8a
 android.minapi = 21

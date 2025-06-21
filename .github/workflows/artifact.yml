@@ -51,6 +51,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Copy pywebview-android.jar
+        run: python -c "import webview.util; import shutil; shutil.copy(webview.util.android_jar_path(), 'pywebview-android.jar')"
+
       - name: Build with Buildozer
         uses: ArtemSBulgakov/buildozer-action@v1
         id: buildozer
