@@ -11,8 +11,8 @@ version = 0.1
 
 requirements = python3,kivy,flask,click,blinker,coloredlogs,humanfriendly,itsdangerous,Jinja2,MarkupSafe,numpy,packaging,typing_extensions,Werkzeug,xxhash
 
-icon.filename = %(source.dir)s/static/asset/favicon
-presplash.filename = %(source.dir)s/static/asset/favicon
+icon.filename = %(source.dir)s/static/asset/favicon-8.png
+presplash.filename = %(source.dir)s/static/asset/favicon-8.png
 
 orientation = portrait
 fullscreen = 0
