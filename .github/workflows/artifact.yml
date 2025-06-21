@@ -11,7 +11,7 @@ on:
 
 jobs:
   linux-build:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - name: Create Executable
         uses: sayyid5416/pyinstaller@v1
@@ -22,7 +22,7 @@ jobs:
           upload_exe_with_name: 'pictopy_linux'
 
   windows-build:
-    runs-on: windows-2019
+    runs-on: windows-latest
     steps:
       - name: Create Executable
         uses: sayyid5416/pyinstaller@v1
@@ -32,8 +32,19 @@ jobs:
           requirements: 'requirements.txt'
           upload_exe_with_name: 'pictopy_windows'
 
+  osx-arm-build:
+    runs-on: macos-latest
+    steps:
+      - name: Create Executable
+        uses: sayyid5416/pyinstaller@v1
+        with:
+          python_ver: '3.10'
+          spec: 'build.spec'
+          requirements: 'requirements.txt'
+          upload_exe_with_name: 'pictopy_osx'
+
   osx-build:
-    runs-on: macos-12
+    runs-on: macos-latest-large
     steps:
       - name: Create Executable
         uses: sayyid5416/pyinstaller@v1
