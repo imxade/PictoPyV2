@@ -33,7 +33,7 @@ jobs:
           upload_exe_with_name: 'pictopy_windows'
 
   osx-arm-build:
-    runs-on: macos-15
+    runs-on: macos-13
     steps:
       - name: Create Executable
         uses: sayyid5416/pyinstaller@v1
