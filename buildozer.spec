@@ -14,7 +14,7 @@ presplash.filename = static/asset/favicon.png
 android.add_assets = static/,models/
 
 # Only supported/possible requirements for Android
-requirements = python3, kivy, pywebview, blinker, bottle, click, coloredlogs, Flask, flatbuffers, humanfriendly, itsdangerous, Jinja2, MarkupSafe, mpmath, numpy, packaging, protobuf, proxy_tools, sympy, typing_extensions, Werkzeug, xxhash
+requirements = mpmath, python3, kivy, pywebview, blinker, bottle, click, coloredlogs, Flask, flatbuffers, humanfriendly, itsdangerous, Jinja2, MarkupSafe, mpmath, numpy, packaging, protobuf, proxy_tools, sympy, typing_extensions, Werkzeug, xxhash
 
 android.permissions = INTERNET
 android.enable_androidx = 1
