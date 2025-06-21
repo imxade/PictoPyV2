@@ -1,29 +1,34 @@
 [app]
 title = PictoPy
-package.name = PictoPy
+package.name = pictopy
 package.domain = org.xade
-
 source.dir = .
-source.include_exts = py,png,jpg,kv,atlas,html,css
-source.include_patterns = static/*,models/*
-
+source.include_exts = py,png,jpg,kv,json,txt,html,css,js
 version = 0.1
 
-requirements = python3,kivy,flask,click,blinker,coloredlogs,humanfriendly,itsdangerous,Jinja2,MarkupSafe,numpy,packaging,typing_extensions,Werkzeug,xxhash
-
-icon.filename = %(source.dir)s/static/asset/favicon-8.png
-presplash.filename = %(source.dir)s/static/asset/favicon-8.png
-
+entrypoint = main.py
 orientation = portrait
 fullscreen = 0
+icon.filename = static/asset/favicon.png
+presplash.filename = static/asset/favicon.png
+android.add_assets = static/,models/
 
-android.archs = arm64-v8a
+# Only supported/possible requirements for Android
+requirements = python3, kivy, pywebview, blinker, bottle, click, coloredlogs, Flask, flatbuffers, humanfriendly, itsdangerous, Jinja2, MarkupSafe, mpmath, numpy, packaging, protobuf, proxy_tools, sympy, typing_extensions, Werkzeug, xxhash
+
+android.permissions = INTERNET
+android.enable_androidx = 1
+
+# Add the pywebview Android JAR (replace with actual path)
+android.add_jars = <path_to_pywebview-android.jar>
+
+arch = arm64-v8a
 android.minapi = 21
-android.api = 31
 android.ndk_api = 21
-p4a.bootstrap = sdl2
-
-log_level = 2
+ignore_setup_py = 1
+copy_libs = 1
 
 [buildozer]
-warn_on_root = 1
+log_level = 2
+warn_on_root = 0
+build_dir = .buildozer
