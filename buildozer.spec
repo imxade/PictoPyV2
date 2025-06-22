@@ -3,7 +3,7 @@ title = PictoPy
 package.name = pictopy
 package.domain = org.xade
 source.dir = .
-source.include_exts = py,png,jpg,kv,json,txt,html,css,js
+# source.include_exts = py,png,jpg,kv,json,txt,html,css,js
 version = 0.1
 
 entrypoint = main.py
@@ -14,14 +14,14 @@ presplash.filename = static/asset/favicon-8.png
 android.add_assets = static/,models/
 
 # Only supported/possible requirements for Android
-requirements = python3, kivy, pywebview, Flask, numpy, xxhash, onnxruntime, opencv-python-headless
-# blinker, bottle, click, coloredlogs, flatbuffers, humanfriendly, itsdangerous, MarkupSafe, packaging, protobuf, proxy_tools, typing_extensions, Werkzeug 
+requirements = python3, pywebview, Flask, numpy, xxhash, onnxruntime, opencv-python-headless, certifi
+# kivy, blinker, bottle, click, coloredlogs, flatbuffers, humanfriendly, itsdangerous, MarkupSafe, packaging, protobuf, proxy_tools, typing_extensions, Werkzeug 
 
 android.permissions = INTERNET
 android.enable_androidx = 1
 
 # Add the pywebview Android JAR (replace with actual path)
-android.add_jars = pywebview-android.jar
+# android.add_jars = pywebview-android.jar
 
 arch = arm64-v8a
 android.minapi = 21
